@@ -48,6 +48,10 @@ const menuData = [
     path: 'list',
     children: [
       {
+        name: '帳號管理',
+        path: 'member-list',
+      },
+      {
         name: '查询表格',
         path: 'table-list',
       },

@@ -135,7 +135,7 @@ const proxy = {
       path: '/base/category/list',
     });
   },
-  'GET /api/(.*)': 'http://127.0.0.1:3003/api',
+  'POST /api/(.*)': 'http://127.0.0.1:3003/api',
 };
 
 export default (noProxy ? {} : delay(proxy, 1000));

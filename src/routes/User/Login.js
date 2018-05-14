@@ -50,12 +50,12 @@ export default class LoginPage extends Component {
     return (
       <div className={styles.main}>
         <Login defaultActiveKey={type} onTabChange={this.onTabChange} onSubmit={this.handleSubmit}>
-          <Tab key="account" tab="账户密码登录">
+          <Tab key="account" tab="Account Login">
             {login.status === 'error' &&
               login.type === 'account' &&
               !login.submitting &&
-              this.renderMessage('账户或密码错误（admin/888888）')}
-            <UserName name="userName" placeholder="admin/user" />
+              this.renderMessage('Account or Password error（admin/888888）')}
+            <UserName name="account" placeholder="admin/user" />
             <Password name="password" placeholder="888888/123456" />
           </Tab>
           <Tab key="mobile" tab="手机号登录">
@@ -68,7 +68,7 @@ export default class LoginPage extends Component {
           </Tab>
           <div>
             <Checkbox checked={this.state.autoLogin} onChange={this.changeAutoLogin}>
-              自动登录
+              Rember Me
             </Checkbox>
             <a style={{ float: 'right' }} href="">
               忘记密码
